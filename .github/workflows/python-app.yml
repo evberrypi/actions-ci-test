@@ -42,8 +42,8 @@ jobs:
     - name: Container scan
       uses: anchore/scan-action@v2
       id: scan
-      acs-report-enable: true
       with:
         image: local/test:latest
+        acs-report-enable: true
         fail-build: true
         severity-cutoff: critical
