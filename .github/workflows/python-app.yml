@@ -39,9 +39,8 @@ jobs:
     - name: Docker build
       run: |
         docker build . -t testing
-    - name: Docker scan
-      run: |
-        docker scan testing
-    - name: Docker test
-      run: | 
-        docker run --entrypoint "figcow test" testing
+    - name: Container scan
+      uses: Azure/docker-login@v1
+        with:
+          image-name: test
+          severity-threshold: LOW
