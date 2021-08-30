@@ -1,3 +1,3 @@
-import figcow as say
-text="This works"
-say text
+from figcow import cow
+s = cow("Testing")
+print(s)
