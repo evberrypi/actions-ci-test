@@ -1,1 +1,3 @@
-figcow "This works"
+from figcow import cow
+s = cow("Testing")
+print(s)
