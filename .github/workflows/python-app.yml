@@ -38,10 +38,12 @@ jobs:
         pipenv run test 
     - name: Docker build
       run: |
-        docker build . -t testing
+        docker build --file Dockerfile -t local/testing:latest
     - name: Container scan
       uses: anchore/scan-action@v2
+      id: scan
+      acs-report-enable: true
       with:
-        image: test
+        image: local/test:latest
         fail-build: true
         severity-cutoff: critical
