@@ -6,4 +6,5 @@ WORKDIR /src
 COPY requirements.txt /src
 
 RUN pip install -r requirements.txt
-CMD python texttest.py
+CMD python3 -m  texttest.py
+ENTRYPOINT figcow hola 

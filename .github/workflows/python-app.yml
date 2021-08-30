@@ -38,4 +38,7 @@ jobs:
         pipenv run test 
     - name: Docker build
       run: |
-        docker build . -t testimg
+        docker build . -t testing
+    - name: Docker scan
+      run: |
+        docker scan --file Dockerfile testing
