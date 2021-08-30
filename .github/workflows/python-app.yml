@@ -33,6 +33,9 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: lsdirs
       run: ls
-    - name: Test with pytest
+    - name: Unit test with pytest
       run: |
         pipenv run test 
+    - namem: Docker build
+      run: |
+        docker build . -t testimg
