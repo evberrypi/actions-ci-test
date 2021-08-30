@@ -1,1 +1,3 @@
-figcow "This works"
+import figcow as say
+
+say "This works"
