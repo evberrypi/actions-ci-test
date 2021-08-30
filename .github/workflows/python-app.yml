@@ -38,7 +38,7 @@ jobs:
         pipenv run test 
     - name: Docker build
       run: |
-        docker build --file Dockerfile -t local/testing:latest
+        docker build . -t local/testing:latest
     - name: Container scan
       uses: anchore/scan-action@v2
       id: scan
