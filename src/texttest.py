@@ -1,3 +1,3 @@
 import figcow as say
-
-say "This works"
+text="This works"
+say text
