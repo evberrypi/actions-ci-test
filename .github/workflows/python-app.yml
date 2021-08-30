@@ -35,4 +35,4 @@ jobs:
       run: ls
     - name: Test with pytest
       run: |
-        python3 -m pytest --import-mode=append test/unittest 
+        python3 -m pytest test/unittest 
