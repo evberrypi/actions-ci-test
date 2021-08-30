@@ -39,11 +39,11 @@ jobs:
     - name: Docker build
       run: |
         docker build . -t local/testing:latest
-    - name: Container scan
-      uses: anchore/scan-action@v2
-      id: scan
-      with:
-        image: local/test:latest
-        acs-report-enable: true
-        fail-build: true
-        severity-cutoff: critical
+#    - name: Container scan
+#      uses: anchore/scan-action@v2
+#      id: scan
+#      with:
+#        image: local/test:latest
+#        acs-report-enable: true
+#        fail-build: true
+#        severity-cutoff: critical
