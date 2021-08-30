@@ -11,9 +11,6 @@ on:
 
 jobs:
   build:
-    stragegy:
-      matrix:
-        python-version: [3.9]
     runs-on: ubuntu-latest
 
     steps:
@@ -37,7 +34,5 @@ jobs:
     - name: lsdirs
       run: ls
     - name: Test with pytest
-      with:
-        python-version: ${{ martix.python-versions}}
       run: |
         pytest --import-mode=append test/unittest 
