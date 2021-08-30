@@ -40,7 +40,7 @@ jobs:
       run: |
         docker build . -t testing
     - name: Container scan
-      uses: Azure/docker-login@v1
+      uses: Azure/docker-login@v0.1
         with:
           image-name: test
           severity-threshold: LOW
