@@ -40,8 +40,8 @@ jobs:
       run: |
         docker build . -t testing
     - name: Container scan
-      uses: Azure/container-scan@v0
+      uses: anchore/scan-action@v2
       with:
-        image-name: test
-        run-quality-checks: true
-        severity-threshold: LOW
+        image: test
+        fail-build: true
+        severity-cutoff: critical
