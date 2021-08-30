@@ -36,6 +36,6 @@ jobs:
     - name: Unit test with pytest
       run: |
         pipenv run test 
-    - namem: Docker build
+    - name: Docker build
       run: |
         docker build . -t testimg
